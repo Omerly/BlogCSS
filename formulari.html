@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Laboratorio II</title>
+        <meta charset="utf-8" />
+        <script languaje="JavaScript"></script>
+        <link rel="stylesheet" href="Css/estilo.css"/>
+        <link rel="stylesheet" href="Css/fontawesome.min.css"/>
+        <link rel="stylesheet" href="Css/all.min.css">
+        <link rel="stylesheet" href="Css/brands.min.css">
+        <link rel="stylesheet" href="Css/regular.min.css">
+        <link rel="stylesheet" href="Css/solid.min.css">
+        <link rel="stylesheet" href="Css/svg-with-js.min.css">
+        <link rel="stylesheet" href="Css/v4-shims.min.css">
+        <script languaje="JavaScript">
+            function validar(f){
+                var ok = true;
+                var acep = "Formulario enviado";
+                if(document.formulario.ficha.value.length==0){
+                    ok = false;
+                    document.formulario.ficha.focus();
+                    alert("Debe ingresar un código");
+                    return 0;
+                }
+                if(document.formulario.nombre.value.length==0){
+                    ok = false;
+                    document.formulario.nombre.focus();
+                    alert("Debe ingresar un nombre");
+                    return 0;
+                }
+                if(document.formulario.apellido.value.length==0){
+                    ok = false;
+                    document.formulario.apellido.focus();
+                    alert("Debe ingresar un apellido");
+                    return 0;
+                }
+                if(document.formulario.edad.value.length==0){
+                    ok = false;
+                    document.formulario.edad.focus();
+                    alert("Dabe ingresar la edad");
+                    return 0;
+                }
+                alert(acep);
+                document.formulario.submit();
+            }
+            function numerico(variable){
+                Numer=parseInt(variable);
+                if(isNaN(Numer)){
+                    return "";
+                }
+                return Numer;
+            }
+            function validar_numerico(control){
+                control.value=numerico(control.value);
+            }             
+            function letras(e) {
+                key=e.keyCode || e.which;
+                teclado = String.fromCharCode(key).toLowerCase();
+                letra = " abcdefghijklmnñopqrstuvwxyzáéíóú";
+                especiales = "8-37-38-46-164";
+                teclado_especial = false;
+                    for(var i in especiales){
+                        if(key==especiales[i]){
+                            teclado_especial=true; break;     
+                        }
+                    }
+                    if(letra.indexOf(teclado)==-1 && !teclado_especial){
+                       return false;
+                       }
+                }
+            </script>
+    </head>
+    <body lang="es">
+        <div id="cab">
+            <header>
+                <div id="Logo">
+                    <img src="images/web.png" width="250" height="140">
+                </div>
+            </header>
+            <nav>
+                <ul>
+                    <a href="index.html"><li><i class="fa fa-home"></i> Inicio</li></a>
+                    <a href="html.html"><li><i class="fa fa-laptop-code"></i> HTML</li></a>
+                    <a href="java.html"><li><i class="fa fa-keyboard"></i> JavaScript</li></a>
+                    <a href="css.html"><li><i class="fa fa-css3"></i> CSS</li></a>
+                    <a href="formulari.html"><li><i class="fa fa-stream"></i> Ej: Formulario</li></a>
+                </ul>
+                <div id="buscador">
+                    <input class="inpbuscar" type="text" value="" placeholder="Buscar...">
+                    <div class="btnbuscar"><i class="fa fa-search"></i></div>
+                </div>
+            </nav>
+        </div>
+        <div id="cuerpo-fondo">
+            <h1 id="titulo"><center>Formulario</center></h1>
+            <center><bn>Bienvenidos a FormApp ¡Envianos tus datos de forma segura!</bn></center><br>
+                <div id="formapp">
+                    <header id="header2">
+                        <div id="Logo2"></div>
+                    </header>
+                    <nav id="formi"><center>FORMULARIO</center></nav>
+                    <form name="formulario" >
+                        <p><center>
+                            <font id="a1"> <b>Ficha o Código:</b> </font> <br> 
+                            <input type="text" maxlength=8 placeholder="Ficha o Código" id="ficha">
+                        </center></p>
+                        <p > 
+                            <font id="a2" > <b>Nombre:  </b> </font><br>
+                            <font id="a3" > <b>Apellido:</b> </font><br>
+                            <input type="text" maxlength=25 placeholder="Nombre" id="nombre" onkeypress="return letras(event)" onpaste="return false"> <br>
+                            <input type="text" maxlength=20 placeholder="Apellido" id="apellido" onkeypress="return letras(event)" onpaste="return false">    
+                        </p>
+                        <p> 
+                            <font id="a4"> <b>Edad:        </b> </font> <br>
+                            <font id="a5"> <b>Departamento:</b> </font> <br>
+                            <input type="text" maxlength=2 placeholder="Edad" id="edad" onkeyUp="return validar_numerico(this);"> <br>
+                            <select id="departamento">
+                                <option>Recursos Humanos</option>
+                                <option>Innovación</option>
+                                <option>Gerencia</option>
+                            </select>
+                        </p>
+                        <div>
+                            <font id="a6"> <b>Género:      </b> </font> <br>
+                            <font id="a7"> <b>Venezolano:  </b> </font> <br>
+                                <p id="m">
+                                    <input name="Respuesta1" type=radio placeholder="M" value="m" checked>M 
+                                    <input name="Respuesta1" type=radio placeholder="F" value="f">F<br>
+                                </p>
+                                <p id="si">
+                                    <input name="Respuesta2" type=radio placeholder="Si" value="si" checked>Si 
+                                    <input name="Respuesta2" type=radio placeholder="No" value="no">No<br>
+                                </p>            
+                        </div><br>
+                        <center>
+                            <input type="button" value="Grabar" id="botong" onClick="validar()">
+                            <input type="reset" value="Reiniciar" id="botonr" onClick="alert('Formulario reiniciado')">
+                        </center>
+                </div>
+            </form>
+        </div>
+        <footer style="color:snow">
+			<center>Laboratorio II &copy; 2020 Todos los derechos reservados</center>
+		</footer>
+    </body>
+</html>

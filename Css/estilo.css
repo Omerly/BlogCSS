@@ -1,0 +1,181 @@
+body{
+    background: url('../Images/escheresque_ste.png') repeat;
+    font-family: sans-serif;
+    font-size: 13pt;
+}
+header{margin: 0px auto 0px auto;}
+#cab{
+    margin: 0px auto;
+    width: 750px; 
+    background: url('../Images/escheresque.png') repeat;
+}
+#Logo{
+    margin: 0px auto;
+    width: 300px; 
+    height:150px;  
+}
+#cuerpo{
+    background: snow;
+    margin: 0px auto 0px auto;
+    width: 750px;
+    min-height: 560px;
+}
+nav{
+    height: 35px;
+    background: #004564;
+}
+nav ul{
+    list-style: none;
+    margin: 0px 0px 0px -40px;
+}
+nav ul li{
+    padding: 5px;
+    height: 25px;
+    line-height: 25px;
+    display: inline-block;
+    background: #004564;
+    color:snow;
+}
+nav ul li:hover{
+    background: rgb(58, 166, 173);
+    color:black;
+    font-weight: bold;
+}
+#buscador{
+    position: absolute;
+    margin: -35px 0px 0px 535px;
+}
+.inpbuscar{
+    position: absolute;
+    margin: 0px 0px 0px 4px;
+    padding: 2px;
+    background: snow;
+    height: 31px;
+    line-height: 31px;
+    color: black;
+    border: none;
+}
+#titulo{
+    position: relative;
+    background: rgb(58, 166, 173);
+    padding: 6px;
+}
+#formapp{
+    background: #d3e9f2;
+    margin: 0px auto;
+    width: 650px;
+    border: 2px dotted #004564;  
+}
+#Logo2{
+    width: 550px; 
+    height:200px;
+    background: url('../Images/Labt.png') no-repeat;
+    margin: 0px auto;
+}
+#a1{
+    font-family: Arial;
+    font-size: 16px;
+    color: black;
+}
+#a2, #a4, #a6{
+    font-family: Arial;
+    font-size: 16px;
+    color: black;
+    margin: 0px 0px 0px 100px;
+}
+#a3, #a5, #a7{
+    position: absolute;
+    font-family: Arial;
+    font-size: 16px;
+    color: black;
+    margin: -20px 0px 0px 350px;
+}
+#ficha{
+    padding: 15px;
+    border:3px solid #1f6f93; 
+    margin-top:10px; 
+    margin-bottom:10px;
+    font-family: Arial;
+    color: black;
+    width: 150px;
+}
+#nombre, #edad{
+    padding: 15px;
+    border:3px solid #1f6f93; 
+    margin-top:10px; 
+    margin-bottom:10px;
+    font-family: Arial;
+    color: black;
+    width: 150px;
+    margin: 0px 0px 0px 100px;
+}
+#apellido{
+    position: absolute;
+    padding: 15px;
+    border:3px solid #1f6f93; 
+    margin-top:10px; 
+    margin-bottom:10px;
+    font-family: Arial;
+    color: black;
+    width: 150px;
+    margin: -51px 0px 0px 350px;
+}
+#departamento{
+    position: absolute;
+    padding: 15px;
+    border:3px solid #1f6f93; 
+    margin-top:10px; 
+    margin-bottom:10px;
+    font-family: Arial;
+    color: black;
+    width: 180px;
+    height: 51px;
+    margin: -51px 0px 0px 350px;
+}
+#botong, #botonr{
+    margin-top:10px; 
+    margin-bottom:20px;
+    border:3px solid black; 
+    width: 150px; 
+    height: 35px; 
+    border-radius: 5px; 
+    font-size: 18px;
+    font-family: Arial;
+}
+#botong{background: rgb(63, 190, 46);}
+#botonr{background: rgb(32, 83, 32);}
+#botong:hover{color: snow;}
+#botonr:hover{color: snow;}
+#m{margin: 0px 0px 0px 100px;}
+#si{
+    position: absolute;
+    margin: -20px 0px 0px 350px;
+}
+#formi{
+    color: snow;
+    padding: 2px;
+    height: 20px;
+}
+#cuerpo-fondo{
+    background: url('../Images/Fondo.png') repeat;
+    margin: 0px auto 0px auto;
+    width: 750px;
+    min-height: 880px;
+}
+#header2{background: white;}
+#def{padding: 20px;}
+.btnbuscar{
+    position: absolute;
+    width: 38px;
+    height: 35px;
+    line-height: 35px;
+    color: snow;
+    margin: 0px 0px 0px 177px;
+    text-align: center;
+    border: none;
+    background: rgb(58, 166, 173);
+}
+.btnbuscar:hover{
+    background:rgb(142, 219, 233);
+    color: black;
+}
